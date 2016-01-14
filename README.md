@@ -15,7 +15,9 @@ After cloning the repo, open a console at the root path of the repo and run
 
 `npm install`
 
-This will install the required npm packages.
+`tsd install`
+
+This will install the required npm packages and TypeScript Typings.
 
 ##Run
 

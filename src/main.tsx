@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import * as DOM from 'react-dom';
+import HelloWorld from './helloworld';
 
 const root = document.getElementById('app');
 
@@ -12,7 +13,7 @@ class Main extends React.Component<any, any> {
 
 	public render() {
 		return (
-          <div>Hello World</div>
+          <HelloWorld />
         );
 	}
 }

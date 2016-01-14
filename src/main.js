@@ -5,6 +5,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var React = require('react');
 var DOM = require('react-dom');
+var helloworld_1 = require('./helloworld');
 var root = document.getElementById('app');
 var Main = (function (_super) {
     __extends(Main, _super);
@@ -12,7 +13,7 @@ var Main = (function (_super) {
         _super.call(this, props);
     }
     Main.prototype.render = function () {
-        return (React.createElement("div", null, "Hello World"));
+        return (React.createElement(helloworld_1["default"], null));
     };
     return Main;
 })(React.Component);
