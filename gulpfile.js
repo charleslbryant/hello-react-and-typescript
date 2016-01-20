@@ -12,7 +12,8 @@ var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
 var eslint = require('gulp-eslint');
 var tsc = require('gulp-typescript');
-var tsProject = tsc.createProject('tsconfig.json');
+var sourcemaps = require('gulp-sourcemaps');
+var tsProject = tsc.createProject('tsconfig.json', { sortOutput: true });
 var del = require('del');
 
 var config = new GulpConfig();
@@ -64,9 +65,11 @@ gulp.task('img', function(done){
 gulp.task('typescript', function(done){
     var tsResult = gulp
         .src([config.paths.tsx, config.paths.tsf])
+        .pipe(sourcemaps.init())
         .pipe(tsc(tsProject));
 
-    return tsResult
+    return tsResult.js
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.paths.tsjsOut));
     done();
 })
