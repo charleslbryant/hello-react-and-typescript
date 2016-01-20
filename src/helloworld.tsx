@@ -7,11 +7,19 @@ export default class HelloWorld extends React.Component<any, any> {
         super(props);
         this.state = { name: this.props.defaultName };
     }
+    
+    public handleOnClick(event: any) : void {
+        this.setState({ name: "Charles" });
+    }
 
 	public render() {
 		return (
             <div>
                 Hello { this.state.name }!
+                <button 
+                    name = "Update"
+                    onClick = { e => this.handleOnClick(e) }
+                >Update</button>
             </div>
         );
 	}
