@@ -103,14 +103,13 @@ gulp.task('watch', function(done){
     gulp.watch(config.paths.html, gulp.series('html', reload));
     gulp.watch(config.paths.img, gulp.series('img', reload));
     gulp.watch(config.paths.css, gulp.series('css', reload));
-    gulp.watch([config.paths.js], gulp.series('js', reload));
-    gulp.watch([config.paths.tsx, config.paths.tsf], gulp.series('typescript'));
+    gulp.watch([config.paths.tsx, config.paths.tsf], gulp.series('typescript', 'lint', 'js', reload));
     done();
 });
 
 gulp.task('default', gulp.series('clean', gulp.parallel('html', 'css', 'img'), 'typescript', 'lint', 'js', 'connect', 'watch'));
 
-function bundle() {
+function bundle(done) {
   return b
     .bundle()
     .on('error', console.error.bind(console))
