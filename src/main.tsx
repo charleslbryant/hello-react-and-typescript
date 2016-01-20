@@ -13,7 +13,9 @@ class Main extends React.Component<any, any> {
 
 	public render() {
 		return (
-          <HelloWorld />
+            <div>
+              <HelloWorld defaultName='World' />
+            </div>
         );
 	}
 }
