@@ -27,4 +27,4 @@ This will kick off the default gulp task to run all the magic and open the index
 
 ##Following the Book
 
-If you want to work with specific examples or samples from the book look for the *Source Code* link near the code or at the beginning of a chapter. It will link to a tagged release where you can get specific revisions of the repository that contain only the changes for the example or sample.
+If you want to work with specific examples or samples from the book look for the **Source Code** link near the code or at the beginning of a chapter. It will link to a tagged release where you can get specific revisions of the repository that contain only the changes for the example or sample.
