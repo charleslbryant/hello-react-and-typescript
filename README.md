@@ -1,6 +1,9 @@
+
 #Hello React and TypeScript
 
 The purpose of this project is to share some of the code samples and examples from the book [Hello React and TypeScript](https://www.gitbook.com/book/charleslbryant/hello-react-and-typescript/details)  by [Charles Bryant](https://decoupledlogic.wordpress.com/). 
+
+[![Build Status](https://travis-ci.org/charleslbryant/hello-react-and-typescript.svg?branch=master)](https://travis-ci.org/charleslbryant/hello-react-and-typescript)
 
 ##Requirements
 
