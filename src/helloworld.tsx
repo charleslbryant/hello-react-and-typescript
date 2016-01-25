@@ -1,8 +1,8 @@
 /// <reference path="../typings/tsd.d.ts" />
 
 import * as React from 'react';
-import HelloForm from 'helloform';
-import HelloContent from 'hellocontent';
+import HelloForm from './helloform';
+import HelloContent from './hellocontent';
 
 export default class HelloWorld extends React.Component<any, any> {
     constructor(props: any){

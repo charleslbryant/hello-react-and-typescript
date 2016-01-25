@@ -1,9 +1,10 @@
 /// <reference path="../typings/tsd.d.ts" />
+/// <reference path="./interfaces.d.ts" />
 
 import * as React from 'react';
 
-export default class HelloForm extends React.Component<any, any> {
-    constructor(props: any){
+export default class HelloForm extends React.Component<IHelloFormProps, any> {
+    constructor(props: IHelloFormProps) {
         super(props);
     }
 
