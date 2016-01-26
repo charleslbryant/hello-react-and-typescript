@@ -111,6 +111,10 @@ gulp.task('default', gulp.series('clean', gulp.parallel('html', 'css', 'img'), '
 
 gulp.task('production', gulp.series('clean', gulp.parallel('html', 'css', 'img'), 'typescript', 'lint', 'js'));
 
+gulp.task('test', function(done){
+    done();
+});
+
 
 function bundle(done) {
   return b
