@@ -107,9 +107,14 @@ gulp.task('watch', function(done){
     done();
 });
 
+gulp.task('stopit', function(done){
+    done();
+    process.exit();
+});
+
 gulp.task('default', gulp.series('clean', gulp.parallel('html', 'css', 'img'), 'typescript', 'lint', 'js', 'connect', 'watch'));
 
-gulp.task('production', gulp.series('clean', gulp.parallel('html', 'css', 'img'), 'typescript', 'lint', 'js'));
+gulp.task('production', gulp.series('clean', gulp.parallel('html', 'css', 'img'), 'typescript', 'lint', 'js', 'stopit'));
 
 gulp.task('test', function(done){
     done();
@@ -117,9 +122,10 @@ gulp.task('test', function(done){
 
 
 function bundle(done) {
-  return b
+    b
     .bundle()
     .on('error', console.error.bind(console))
     .pipe(source('scripts/bundle.js'))
     .pipe(gulp.dest('./dist'));
+    done();
 }
