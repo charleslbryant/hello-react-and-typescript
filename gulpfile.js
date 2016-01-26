@@ -109,6 +109,9 @@ gulp.task('watch', function(done){
 
 gulp.task('default', gulp.series('clean', gulp.parallel('html', 'css', 'img'), 'typescript', 'lint', 'js', 'connect', 'watch'));
 
+gulp.task('production', gulp.series('clean', gulp.parallel('html', 'css', 'img'), 'typescript', 'lint', 'js'));
+
+
 function bundle(done) {
   return b
     .bundle()
