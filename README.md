@@ -16,15 +16,27 @@ After cloning the repo, open a console at the root path of the repo and run
 
 `npm install`
 
+`npm install tsd -g`
+
 `tsd install`
 
-This will install the required npm packages and TypeScript Typings.
+This will install the required npm packages, TypeScript definition manager and TypeScript Typings.
 
 ##Run
 
-To run the project, open a console at the root path of the repo and run
+To run the project in browser with automatic reloads on file changes, open a console at the root path of the repo and run
 
 `gulp`
+
+##Production Build
+
+Run a build to release to production (doesn't open in browser, etc.).
+
+`gulp production`
+
+##Run Tests
+
+`gulp test`
 
 This will kick off the default gulp task to run all the magic and open the index.html page in a browser.
 
