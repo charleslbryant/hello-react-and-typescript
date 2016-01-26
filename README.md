@@ -22,7 +22,7 @@ After cloning the repo, open a console at the root path of the repo and run
 
 This will install the required npm packages, TypeScript definition manager and TypeScript Typings.
 
-##Run
+##Development Run
 
 To run the project in browser with automatic reloads on file changes, open a console at the root path of the repo and run
 
