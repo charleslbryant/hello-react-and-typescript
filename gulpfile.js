@@ -32,7 +32,7 @@ gulp.task('clean', function(done){
 });
 
 gulp.task('html', function(done){
-    return combiner.obj([
+    combiner.obj([
         gulp.src(config.paths.html)
         .pipe(gulp.dest(config.paths.dist))
         .pipe(connect.reload())
@@ -68,14 +68,14 @@ gulp.task('typescript', function(done){
         .pipe(sourcemaps.init())
         .pipe(tsc(tsProject));
 
-    return tsResult.js
+    tsResult.js
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.paths.tsjsOut));
     done();
 })
 
 gulp.task('lint', function(done){
-    return gulp
+    gulp
         .src(config.paths.js)
         .pipe(eslint())
         .pipe(eslint.format());
