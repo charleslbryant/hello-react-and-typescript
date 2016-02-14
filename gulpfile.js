@@ -36,7 +36,7 @@ gulp.task('html', function(done){
         gulp.src(config.paths.html)
         .pipe(gulp.dest(config.paths.dist))
         .pipe(connect.reload())
-    ])    
+    ])
     .on('error', console.error.bind(console));
     done();
 });
@@ -82,7 +82,10 @@ gulp.task('lint', function(done){
     done();
 });
 
-gulp.task('js', bundle);
+gulp.task('js', function(done){
+  bundle();
+  done();
+});
 
 gulp.task('connect', function(done){
     connect.server({
@@ -99,7 +102,7 @@ gulp.task('watch', function(done){
         server: "./dist",
         port: config.port
     });
-    
+
     gulp.watch(config.paths.html, gulp.series('html', reload));
     gulp.watch(config.paths.img, gulp.series('img', reload));
     gulp.watch(config.paths.css, gulp.series('css', reload));
@@ -121,11 +124,10 @@ gulp.task('test', function(done){
 });
 
 
-function bundle(done) {
+function bundle() {
     b
     .bundle()
     .on('error', console.error.bind(console))
     .pipe(source('scripts/bundle.js'))
     .pipe(gulp.dest('./dist'));
-    done();
 }
