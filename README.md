@@ -22,6 +22,10 @@ After cloning the repo, open a console at the root path of the repo and run
 
 This will install the required npm packages, TypeScript definition manager and TypeScript Typings.
 
+There is an issue with the gulp package reference and I don't want to rebuild the repo to fix the tags. If you have errors related to Issue [#1](https://github.com/charleslbryant/hello-react-and-typescript/issues/1), run this command
+
+`npm install -g "gulpjs/gulp-cli#4.0"`
+
 ##Development Run
 
 To run the project in browser with automatic reloads on file changes, open a console at the root path of the repo and run
